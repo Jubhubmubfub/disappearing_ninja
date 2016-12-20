@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Disappearing Ninja</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        $('img').click(function(){
+          console.log("hide this image")
+          $(this).hide();
+        })
+
+        $('#restore').click(function(){
+          console.log("restoring images");
+          $('img').show();
+        });
+
+      });
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>jQuery - assignment 1</h1>
+      <p>When you click on an image, it will dissapear</p>
+      <div>
+        <div>
+          <img src="images/jon_square.png">
+          <img src="images/curry_square.png">
+          <img src="images/ford_square.png">
+          <img src="images/john_square.jpg">
+        </div>
+      </div>
+      <div>
+        <div>
+          <img src="images/matt_square.jpg">
+          <img src="images/michelle_square.png">
+          <img src="images/rami_square.png">
+          <img src="images/saul_square.jpg">
+        </div>
+      </div>
+      <button id="restore" type="button" name="restore">Restore</button>
+    </div>
+  </body>
+</html>
